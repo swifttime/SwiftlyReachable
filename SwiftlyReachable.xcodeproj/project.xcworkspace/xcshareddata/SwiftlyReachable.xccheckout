@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>54C600E6-9574-40D4-8DE3-C84CFA6C35C0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SwiftlyReachable</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2BB614B15F052557E8613BE66710BBD7AC213255</key>
+		<string>ssh://stormborn.bk.mti.io/git/SwiftlyReachable.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwiftlyReachable.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2BB614B15F052557E8613BE66710BBD7AC213255</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://stormborn.bk.mti.io/git/SwiftlyReachable.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2BB614B15F052557E8613BE66710BBD7AC213255</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2BB614B15F052557E8613BE66710BBD7AC213255</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftlyReachable</string>
+		</dict>
+	</array>
+</dict>
+</plist>

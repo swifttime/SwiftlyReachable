@@ -5,7 +5,7 @@
 //  Created by Rick Windham on 2/4/15.
 //  Copyright (c) 2015 SwiftTime. All rights reserved.
 //
-
+import UIKit
 import XCTest
 
 public var statusFlags:UInt32 = 0
