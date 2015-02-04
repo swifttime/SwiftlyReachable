@@ -10,6 +10,12 @@
 		1DFF61C31A829B5800E07251 /* SwiftlyReachable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFF61C21A829B5800E07251 /* SwiftlyReachable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DFF61C91A829B5800E07251 /* SwiftlyReachable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFF61BD1A829B5800E07251 /* SwiftlyReachable.framework */; };
 		1DFF61D01A829B5800E07251 /* SwiftlyReachableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61CF1A829B5800E07251 /* SwiftlyReachableTests.swift */; };
+		1DFF61DD1A829C7700E07251 /* STReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61DC1A829C7700E07251 /* STReachability.swift */; };
+		1DFF61E01A829DEF00E07251 /* STReachabilityBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFF61DE1A829DEF00E07251 /* STReachabilityBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DFF61E11A829DEF00E07251 /* STReachabilityBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61DF1A829DEF00E07251 /* STReachabilityBridge.m */; };
+		1DFF61E21A82A22400E07251 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFF61D91A829B8D00E07251 /* SystemConfiguration.framework */; };
+		1DFF61E41A82A46F00E07251 /* STTestBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61E31A82A46F00E07251 /* STTestBridge.swift */; };
+		1DFF61E51A82A48500E07251 /* STReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61DC1A829C7700E07251 /* STReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,11 @@
 		1DFF61C81A829B5800E07251 /* SwiftlyReachableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftlyReachableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFF61CE1A829B5800E07251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DFF61CF1A829B5800E07251 /* SwiftlyReachableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftlyReachableTests.swift; sourceTree = "<group>"; };
+		1DFF61D91A829B8D00E07251 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1DFF61DC1A829C7700E07251 /* STReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STReachability.swift; sourceTree = "<group>"; };
+		1DFF61DE1A829DEF00E07251 /* STReachabilityBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STReachabilityBridge.h; sourceTree = "<group>"; };
+		1DFF61DF1A829DEF00E07251 /* STReachabilityBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STReachabilityBridge.m; sourceTree = "<group>"; };
+		1DFF61E31A82A46F00E07251 /* STTestBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTestBridge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFF61E21A82A22400E07251 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +68,7 @@
 				1DFF61BF1A829B5800E07251 /* SwiftlyReachable */,
 				1DFF61CC1A829B5800E07251 /* SwiftlyReachableTests */,
 				1DFF61BE1A829B5800E07251 /* Products */,
+				1DFF61DB1A829B9800E07251 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +86,9 @@
 			children = (
 				1DFF61C21A829B5800E07251 /* SwiftlyReachable.h */,
 				1DFF61C01A829B5800E07251 /* Supporting Files */,
+				1DFF61DC1A829C7700E07251 /* STReachability.swift */,
+				1DFF61DE1A829DEF00E07251 /* STReachabilityBridge.h */,
+				1DFF61DF1A829DEF00E07251 /* STReachabilityBridge.m */,
 			);
 			path = SwiftlyReachable;
 			sourceTree = "<group>";
@@ -89,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				1DFF61CF1A829B5800E07251 /* SwiftlyReachableTests.swift */,
+				1DFF61E31A82A46F00E07251 /* STTestBridge.swift */,
 				1DFF61CD1A829B5800E07251 /* Supporting Files */,
 			);
 			path = SwiftlyReachableTests;
@@ -102,6 +119,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1DFF61DB1A829B9800E07251 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DFF61D91A829B8D00E07251 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -109,6 +134,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFF61E01A829DEF00E07251 /* STReachabilityBridge.h in Headers */,
 				1DFF61C31A829B5800E07251 /* SwiftlyReachable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +189,7 @@
 				TargetAttributes = {
 					1DFF61BC1A829B5800E07251 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = TM7482QQ7Q;
 					};
 					1DFF61C71A829B5800E07251 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -209,6 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFF61E11A829DEF00E07251 /* STReachabilityBridge.m in Sources */,
+				1DFF61DD1A829C7700E07251 /* STReachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFF61E51A82A48500E07251 /* STReachability.swift in Sources */,
 				1DFF61D01A829B5800E07251 /* SwiftlyReachableTests.swift in Sources */,
+				1DFF61E41A82A46F00E07251 /* STTestBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +350,8 @@
 		1DFF61D41A829B5800E07251 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +361,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1DFF61D51A829B5800E07251 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

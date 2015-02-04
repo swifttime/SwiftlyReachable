@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char SwiftlyReachableVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SwiftlyReachable/PublicHeader.h>
 
-
+//#import "STReachabilityBridge.h"
+#import <SwiftlyReachable/STReachabilityBridge.h>
