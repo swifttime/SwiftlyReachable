@@ -63,6 +63,21 @@ public class STReachability {
         }
     }
     
+    // MARK: - demo property
+    
+    public var binaryFlags:String {
+        var fmtString = ""
+        var fmtFlags = flags.flags
+        
+        do {
+            let temp = fmtFlags & 1 > 0 ? "1" : "0"
+            fmtString = temp + fmtString
+            fmtFlags /= 2;
+        } while fmtFlags > 0
+        
+        return fmtString
+    }
+    
     // MARK: - lifecycle
     
     public convenience init() {
