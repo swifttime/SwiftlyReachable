@@ -94,7 +94,7 @@ static void STReachabilityCallback(SCNetworkReachabilityRef __unused target, SCN
 }
 
 - (UInt32)getStatus {
-    UInt32 flags;
+    SCNetworkReachabilityFlags flags;
     
     if (!SCNetworkReachabilityGetFlags(_target, &flags)) {
         return 0;
