@@ -39,12 +39,11 @@ static void STReachabilityCallback(SCNetworkReachabilityRef __unused target, SCN
 
 - (instancetype)initWithTarget:(SCNetworkReachabilityRef)target andBlock:(changeBlock)block {
     self = [super init];
-    if (!self) {
-        return nil;
+    if (self) {
+        _monitoring = NO;
+        _block = block;
+        _target = target;        
     }
-    _monitoring = NO;
-    _block = block;
-    _target = target;
     
     return self;
 }
