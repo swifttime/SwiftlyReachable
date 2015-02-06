@@ -42,9 +42,30 @@ public class STReachability {
         }
     }
     
+    // MARK: - demo app property
+    
+    public var binaryFlags:String {
+        var fmtString = ""
+        var fmtFlags = flags.flags
+        
+        do {
+            let temp = fmtFlags & 1 > 0 ? "1" : "0"
+            fmtString = temp + fmtString
+            fmtFlags /= 2;
+        } while fmtFlags > 0
+        
+        return String(count: 32 - fmtString.lengthOfBytesUsingEncoding(NSUTF8StringEncoding), repeatedValue: Character("0")) + fmtString
+    }
+    
     // MARK: - properties
     
     public   var changedBlock:((STReachabilityStatus)->())?
+
+    public   var isMonitoring:Bool {
+        get {
+            return bridge.monitoring
+        }
+    }
     
     internal var status:STReachabilityStatus = .Unknown
     private  let reachability:SCNetworkReachability
@@ -61,21 +82,6 @@ public class STReachability {
                 }
             }
         }
-    }
-    
-    // MARK: - demo property
-    
-    public var binaryFlags:String {
-        var fmtString = ""
-        var fmtFlags = flags.flags
-        
-        do {
-            let temp = fmtFlags & 1 > 0 ? "1" : "0"
-            fmtString = temp + fmtString
-            fmtFlags /= 2;
-        } while fmtFlags > 0
-        
-        return fmtString
     }
     
     // MARK: - lifecycle
@@ -100,7 +106,10 @@ public class STReachability {
         
         bridge = STReachabilityBridge(target:reachability, andBlock:{[weak self] newFlags
             in
-            self?.flags.flags = newFlags
+            
+            if let strongSelf = self {
+                strongSelf.flags.flags = newFlags
+            }
             
             return Void()
         })
@@ -113,6 +122,14 @@ public class STReachability {
     }
     
     // MARK: - functions
+    
+    public func getUpdate() {
+        updateFlags()
+    }
+    
+    public func getStatus() -> STReachabilityStatus {
+        return status
+    }
     
     public func startMonitor() -> Bool {
         return bridge.startMonitoring()

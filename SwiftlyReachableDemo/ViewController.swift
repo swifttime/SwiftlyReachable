@@ -11,13 +11,27 @@ import SwiftlyReachable
 
 class ViewController: UIViewController {
 
+    // MARK: - outlets
+    
+    @IBOutlet weak var flagsLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var monitorButton: UIButton!
+    
+    // MARK: - properties
+    
     let reachability = STReachability()
+    
+    // MARK: - lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        reachability.changedBlock = {status in
-            NSLog("status changed")
+        
+        reachability.changedBlock = {[weak self] status in
+            if let strongSelf = self {
+                strongSelf.flagsLabel.text = strongSelf.reachability.binaryFlags
+                strongSelf.statusLabel.text = strongSelf.statusString(status)
+            }
         }
     }
 
@@ -29,11 +43,46 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if reachability.startMonitor() {
-            NSLog("Started: true")
+        updateStatus()
+    }
+    
+    // MARK: - actions
+    
+    @IBAction func monitorAction(sender: AnyObject) {
+        if reachability.isMonitoring {
+            reachability.startMonitor()
+            monitorButton.setTitle("Start", forState: .Normal)
         } else {
-            NSLog("Started: false")
+            if reachability.startMonitor() {
+                monitorButton.setTitle("Stop", forState: .Normal)
+            }
         }
     }
+    
+    @IBAction func getStatusAction(sender: AnyObject) {
+        updateStatus()
+    }
+    
+    // MARK: - functions
+    
+    func updateStatus() {
+        flagsLabel.text = reachability.binaryFlags
+        statusLabel.text = statusString(reachability.getStatus())
+    }
+    
+    func statusString(status:STReachability.STReachabilityStatus) -> String {
+        switch (status) {
+        case (.ViaCellData):
+            return "CellData"
+        case (.ViaWiFi):
+            return "WiFi"
+        case (.Unknown):
+            return "Unknown"
+        default:
+            return "None"
+        }
+    }
+    
+
 }
 
