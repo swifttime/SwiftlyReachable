@@ -110,8 +110,6 @@ public class STReachability {
             if let strongSelf = self {
                 strongSelf.flags.flags = newFlags
             }
-            
-            return Void()
         })
 
         updateFlags()
