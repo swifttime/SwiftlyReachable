@@ -104,9 +104,7 @@ public class STReachability {
         
         reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, nodeName).takeRetainedValue()
         
-        bridge = STReachabilityBridge(target:reachability, andBlock:{[weak self] newFlags
-            in
-            
+        bridge = STReachabilityBridge(target:reachability, andBlock:{[weak self] newFlags in
             if let strongSelf = self {
                 strongSelf.flags.flags = newFlags
             }
