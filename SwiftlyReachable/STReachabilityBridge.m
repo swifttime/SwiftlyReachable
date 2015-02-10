@@ -51,14 +51,13 @@ static void STReachabilityCallback(SCNetworkReachabilityRef __unused target, SCN
 - (BOOL)startMonitoring {
     [self stopMonitoring];
     
-    SCNetworkReachabilityContext    context = { 0, NULL, NULL, NULL, NULL };
-    
     _reachabilitySerialQueue = dispatch_queue_create("me.swiftti.streachability", NULL);
     if(_reachabilitySerialQueue == nil)
     {
         return NO;
     }
     
+    SCNetworkReachabilityContext    context = { 0, NULL, NULL, NULL, NULL };
     context.info = (__bridge void *)_block;
     
     if (!SCNetworkReachabilitySetCallback(_target, STReachabilityCallback, &context)) {

@@ -118,7 +118,8 @@ public class STReachability {
     }
     
     deinit {
-        
+        // stop monitoring before we go away
+        stopMonitor()
     }
     
     // MARK: - functions
