@@ -47,7 +47,7 @@ class SwiftlyReachableTests: XCTestCase {
         }
         reachability.startMonitor()
         
-        self.waitForExpectationsWithTimeout(1, nil)
+        self.waitForExpectationsWithTimeout(1, handler: nil)
         
         XCTAssertEqual(blockStatus, self.STATUS_WIFI, "status should be ViaWiFi")
     }

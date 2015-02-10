@@ -73,7 +73,7 @@ class ViewController: UIViewController {
     func statusString(status:STReachability.STReachabilityStatus) -> String {
         switch (status) {
         case (.ViaCellData):
-            return "CellData"
+            return "Cell Data"
         case (.ViaWiFi):
             return "WiFi"
         case (.Unknown):

@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2BB614B15F052557E8613BE66710BBD7AC213255</key>
-		<string>ssh://stormborn.bk.mti.io/git/SwiftlyReachable.git</string>
+		<string>ssh://motoko.bk.mti.io/git/SwiftlyReachable.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SwiftlyReachable.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://stormborn.bk.mti.io/git/SwiftlyReachable.git</string>
+	<string>ssh://motoko.bk.mti.io/git/SwiftlyReachable.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
