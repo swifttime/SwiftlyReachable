@@ -61,24 +61,17 @@ static void STReachabilityCallback(SCNetworkReachabilityRef __unused target, SCN
     context.info = (__bridge void *)_block;
     
     if (!SCNetworkReachabilitySetCallback(_target, STReachabilityCallback, &context)) {
-        
-        SCNetworkReachabilitySetCallback(_target, NULL, NULL);
-        
-        if (_reachabilitySerialQueue) {
-            _reachabilitySerialQueue = nil;
-        }
+        [self stopMonitoring];
         
         return NO;
     }
     
     if (!SCNetworkReachabilitySetDispatchQueue(_target, _reachabilitySerialQueue)) {
-        SCNetworkReachabilitySetCallback(_target, NULL, NULL);
-        if (_reachabilitySerialQueue) {
-            _reachabilitySerialQueue = nil;
-        }
+        [self stopMonitoring];
         
         return NO;
     }
+    
     _monitoring = YES;
     
     return YES;
