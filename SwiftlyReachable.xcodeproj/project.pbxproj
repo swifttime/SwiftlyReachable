@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		1D2991CD1A8C035100220B68 /* SwiftlyReachableOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2991CC1A8C035100220B68 /* SwiftlyReachableOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D2991D31A8C035100220B68 /* SwiftlyReachableOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2991C81A8C035100220B68 /* SwiftlyReachableOSX.framework */; };
-		1D2991DA1A8C035100220B68 /* SwiftlyReachableOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2991D91A8C035100220B68 /* SwiftlyReachableOSXTests.swift */; };
-		1D2991E11A8C037500220B68 /* SwiftlyReachable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFF61C21A829B5800E07251 /* SwiftlyReachable.h */; };
 		1D2991E21A8C037F00220B68 /* STReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61DC1A829C7700E07251 /* STReachability.swift */; };
 		1D2991E31A8C038000220B68 /* STReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61DC1A829C7700E07251 /* STReachability.swift */; };
-		1D2991E41A8C038400220B68 /* STReachabilityBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFF61DE1A829DEF00E07251 /* STReachabilityBridge.h */; };
+		1D2991E41A8C038400220B68 /* STReachabilityBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFF61DE1A829DEF00E07251 /* STReachabilityBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D2991E51A8C038900220B68 /* STReachabilityBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61DF1A829DEF00E07251 /* STReachabilityBridge.m */; };
+		1D2991E71A8C097C00220B68 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2991E61A8C097C00220B68 /* SystemConfiguration.framework */; };
+		1D2991E81A8C0A7100220B68 /* STTestBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61E31A82A46F00E07251 /* STTestBridge.swift */; };
+		1D2991EC1A8C0BFF00220B68 /* SwiftlyReachableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF61CF1A829B5800E07251 /* SwiftlyReachableTests.swift */; };
 		1D7B44FA1A82B79100ABCA02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B44F91A82B79100ABCA02 /* AppDelegate.swift */; };
 		1D7B44FC1A82B79100ABCA02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B44FB1A82B79100ABCA02 /* ViewController.swift */; };
 		1D7B44FF1A82B79100ABCA02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B44FD1A82B79100ABCA02 /* Main.storyboard */; };
@@ -86,7 +87,7 @@
 		1D2991CC1A8C035100220B68 /* SwiftlyReachableOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftlyReachableOSX.h; sourceTree = "<group>"; };
 		1D2991D21A8C035100220B68 /* SwiftlyReachableOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftlyReachableOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2991D81A8C035100220B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D2991D91A8C035100220B68 /* SwiftlyReachableOSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftlyReachableOSXTests.swift; sourceTree = "<group>"; };
+		1D2991E61A8C097C00220B68 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		1D7B44F51A82B79100ABCA02 /* SwiftlyReachableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftlyReachableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7B44F81A82B79100ABCA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D7B44F91A82B79100ABCA02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D2991E71A8C097C00220B68 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +183,6 @@
 		1D2991D61A8C035100220B68 /* SwiftlyReachableOSXTests */ = {
 			isa = PBXGroup;
 			children = (
-				1D2991D91A8C035100220B68 /* SwiftlyReachableOSXTests.swift */,
 				1D2991D71A8C035100220B68 /* Supporting Files */,
 			);
 			path = SwiftlyReachableOSXTests;
@@ -301,6 +302,7 @@
 		1DFF61DB1A829B9800E07251 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D2991E61A8C097C00220B68 /* SystemConfiguration.framework */,
 				1DFF61D91A829B8D00E07251 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
@@ -313,9 +315,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D2991CD1A8C035100220B68 /* SwiftlyReachableOSX.h in Headers */,
-				1D2991E11A8C037500220B68 /* SwiftlyReachable.h in Headers */,
 				1D2991E41A8C038400220B68 /* STReachabilityBridge.h in Headers */,
+				1D2991CD1A8C035100220B68 /* SwiftlyReachableOSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,8 +556,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D2991DA1A8C035100220B68 /* SwiftlyReachableOSXTests.swift in Sources */,
+				1D2991E81A8C0A7100220B68 /* STTestBridge.swift in Sources */,
 				1D2991E31A8C038000220B68 /* STReachability.swift in Sources */,
+				1D2991EC1A8C0BFF00220B68 /* SwiftlyReachableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,11 @@
 #import <ifaddrs.h>
 #import <netdb.h>
 
+#ifdef TARGET_IPHONE_OS
 #import <SwiftlyReachable/SwiftlyReachable-Swift.h>
+#else
+#import <SwiftlyReachableOSX/SwiftlyReachableOSX-Swift.h>
+#endif
 
 @interface STReachabilityBridge ()
 @property (assign) BOOL monitoring;
