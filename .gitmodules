@@ -4,3 +4,6 @@
 [submodule "Vendor/Nimble"]
 	path = Vendor/Nimble
 	url = git@github.com:Quick/Nimble.git
+[submodule "Vendor/Async"]
+	path = Vendor/Async
+	url = git@github.com:duemunk/Async.git

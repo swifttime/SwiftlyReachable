@@ -18,7 +18,7 @@ class STReachabilityBridge {
     
     init(target:SCNetworkReachability, andBlock block:changeBlock) {
         println("statusFlags \(statusFlags)")
-        self.block = block
+        self.block = block        
     }
     
     deinit {
@@ -26,7 +26,7 @@ class STReachabilityBridge {
     }
     
     func startMonitoring() -> Bool {
-        dispatch_async(dispatch_get_main_queue()) {self.block(statusFlags)}
+        Async.main(after: 2.0) {self.block(statusFlags)}
         
         return true
     }

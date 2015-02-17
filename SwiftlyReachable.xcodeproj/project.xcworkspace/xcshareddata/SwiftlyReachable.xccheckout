@@ -12,6 +12,12 @@
 	<dict>
 		<key>2BB614B15F052557E8613BE66710BBD7AC213255</key>
 		<string>ssh://motoko.bk.mti.io/git/SwiftlyReachable.git</string>
+		<key>8CCFBC236B2D99F3320873838535AF1EA5422AB1</key>
+		<string>github.com:duemunk/Async.git</string>
+		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
+		<string>github.com:Quick/Nimble.git</string>
+		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
+		<string>github.com:Quick/Quick.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SwiftlyReachable.xcodeproj</string>
@@ -19,6 +25,12 @@
 	<dict>
 		<key>2BB614B15F052557E8613BE66710BBD7AC213255</key>
 		<string>../..</string>
+		<key>8CCFBC236B2D99F3320873838535AF1EA5422AB1</key>
+		<string>../../Vendor/Async/</string>
+		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
+		<string>../../Vendor/Nimble</string>
+		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
+		<string>../../Vendor/Quick</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://motoko.bk.mti.io/git/SwiftlyReachable.git</string>
@@ -28,6 +40,30 @@
 	<string>2BB614B15F052557E8613BE66710BBD7AC213255</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8CCFBC236B2D99F3320873838535AF1EA5422AB1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Async</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>95438028B10BBB846574013D29F154A00556A9D1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Nimble</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Quick</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

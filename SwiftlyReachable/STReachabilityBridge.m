@@ -15,7 +15,7 @@
 #import <ifaddrs.h>
 #import <netdb.h>
 
-#ifdef TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE
 #import <SwiftlyReachable/SwiftlyReachable-Swift.h>
 #else
 #import <SwiftlyReachableOSX/SwiftlyReachableOSX-Swift.h>
