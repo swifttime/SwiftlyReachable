@@ -31,7 +31,7 @@ class STReachabilityOSXSpec: QuickSpec {
         
         describe("STReachability") {
             context("when background updates are started") {
-                it("should start updating status in the background") {
+                it("should execute the block when the status changes") {
                     statusFlags = FLAGS_FOR_WIFI
                     var blockStatus:STReachability.Status = .Unknown
                     reachability.changedBlock = {status
