@@ -19,9 +19,9 @@ class STReachabilityOSXSpec: QuickSpec {
         let FLAGS_FOR_WIFI:UInt32        = 0b10
         let FLAGS_FOR_CELL:UInt32        = 0b1000000000000000011
 
-        let STATUS_UNREACHABLE = STReachability.STReachabilityStatus.UnReachable
-        let STATUS_WIFI        = STReachability.STReachabilityStatus.ViaWiFi
-        let STATUS_CELL        = STReachability.STReachabilityStatus.ViaCellData
+        let STATUS_UNREACHABLE = STReachability.Status.UnReachable
+        let STATUS_WIFI        = STReachability.Status.ViaWiFi
+        let STATUS_CELL        = STReachability.Status.ViaCellData
 
         var reachability:STReachability!
         
@@ -33,7 +33,7 @@ class STReachabilityOSXSpec: QuickSpec {
             context("background updates are started") {
                 it("should start updating status in the background") {
                     statusFlags = FLAGS_FOR_WIFI
-                    var blockStatus:STReachability.STReachabilityStatus = .Unknown
+                    var blockStatus:STReachability.Status = .Unknown
                     reachability.changedBlock = {status
                         in
                         blockStatus = status

@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         statusLabel.text = statusString(reachability.getStatus())
     }
     
-    func statusString(status:STReachability.STReachabilityStatus) -> String {
+    func statusString(status:STReachability.Status) -> String {
         switch (status) {
         case (.ViaCellData):
             return "Cell Data"

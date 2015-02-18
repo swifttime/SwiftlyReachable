@@ -14,14 +14,14 @@ public class STReachability {
 
     // MARK: - data structures
     
-    public enum STReachabilityStatus {
+    public enum Status {
         case Unknown
         case UnReachable
         case ViaWiFi
         case ViaCellData
     }
     
-    public struct STReachabilityFlags {
+    public struct Flags {
         enum ReachabilityFlags:UInt32 {
             case Unknown = 0
             case TransientConnection = 1 // 1<<0
@@ -59,7 +59,7 @@ public class STReachability {
     
     // MARK: - properties
     
-    public   var changedBlock:((STReachabilityStatus)->())?
+    public   var changedBlock:((Status)->())?
 
     public   var isMonitoring:Bool {
         get {
@@ -67,12 +67,12 @@ public class STReachability {
         }
     }
     
-    internal var status:STReachabilityStatus = .Unknown
+    internal var status:Status = .Unknown
     private  let reachability:SCNetworkReachability
     
     private var bridge:STReachabilityBridge!
     
-    private var flags:STReachabilityFlags = STReachabilityFlags() {
+    private var flags:Flags = Flags() {
         didSet {
             if flags.flags != oldValue.flags {
                 updateStatus()
@@ -124,7 +124,7 @@ public class STReachability {
         updateFlags()
     }
     
-    public func getStatus() -> STReachabilityStatus {
+    public func getStatus() -> Status {
         return status
     }
     

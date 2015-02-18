@@ -21,9 +21,9 @@ class SwiftlyReachableTests: XCTestCase {
     let FLAGS_FOR_WIFI:UInt32 = 0b10
     let FLAGS_FOR_CELL:UInt32 = 0b1000000000000000011
     
-    let STATUS_UNREACHABLE = STReachability.STReachabilityStatus.UnReachable
-    let STATUS_WIFI        = STReachability.STReachabilityStatus.ViaWiFi
-    let STATUS_CELL        = STReachability.STReachabilityStatus.ViaCellData
+    let STATUS_UNREACHABLE = STReachability.Status.UnReachable
+    let STATUS_WIFI        = STReachability.Status.ViaWiFi
+    let STATUS_CELL        = STReachability.Status.ViaCellData
     
     var reachability:STReachability! = nil
     var expect:XCTestExpectation! = nil
@@ -43,7 +43,7 @@ class SwiftlyReachableTests: XCTestCase {
     
     func testStatusChangedBlock() {
         
-        var blockStatus:STReachability.STReachabilityStatus = .UnReachable
+        var blockStatus:STReachability.Status = .UnReachable
         statusFlags = FLAGS_FOR_WIFI
         reachability.changedBlock = {status
             in
