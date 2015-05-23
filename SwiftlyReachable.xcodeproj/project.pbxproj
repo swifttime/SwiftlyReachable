@@ -361,13 +361,13 @@
 		1DFF61B31A829B5800E07251 = {
 			isa = PBXGroup;
 			children = (
-				1D7963D21A92FB0E00EE62E2 /* Vendor */,
 				1DFF61BF1A829B5800E07251 /* SwiftlyReachable */,
 				1DFF61CC1A829B5800E07251 /* SwiftlyReachableTests */,
 				1D7B44F61A82B79100ABCA02 /* SwiftlyReachableDemo */,
 				1D7B450C1A82B79100ABCA02 /* SwiftlyReachableDemoTests */,
 				1D2991C91A8C035100220B68 /* SwiftlyReachableOSX */,
 				1D2991D61A8C035100220B68 /* SwiftlyReachableOSXTests */,
+				1D7963D21A92FB0E00EE62E2 /* Vendor */,
 				1DFF61BE1A829B5800E07251 /* Products */,
 				1DFF61DB1A829B9800E07251 /* Frameworks */,
 			);
