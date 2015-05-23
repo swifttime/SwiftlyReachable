@@ -11,6 +11,15 @@ import SystemConfiguration
 
 typealias changeBlock = ((UInt32) -> Void)
 
+func delay(delay:Double, closure:()->()) {
+    dispatch_after(
+        dispatch_time(
+            DISPATCH_TIME_NOW,
+            Int64(delay * Double(NSEC_PER_SEC))
+        ),
+        dispatch_get_main_queue(), closure)
+}
+
 class STReachabilityBridge {
     var monitoring:Bool = false
     var target:SCNetworkReachability!
@@ -26,7 +35,7 @@ class STReachabilityBridge {
     }
     
     func startMonitoring() -> Bool {
-        Async.main(after: 2.0) {self.block(statusFlags)}
+        delay(2.0) {self.block(statusFlags)}
         
         return true
     }
